@@ -1,0 +1,134 @@
+ul, li {
+    list-style: none;
+}
+
+h2,
+h3,
+h4 {
+    color: #323232;
+}
+
+h2 {
+    font-weight: 100;
+}
+
+a,
+body {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: "Microsoft YaHei";
+}
+.container {
+    height: 60px;
+    background-color: #323232;
+}
+.header {
+    margin: 0 auto;
+    width: 980px;
+    height: 60px;
+}
+.wesharelogo{
+    width: 247px;
+    height: 60px;
+    background: url("../img/weshare_logo.png") no-repeat;
+}
+.nav {
+    margin-top: -48px;
+    margin-right: 20px;
+    height: 32px;
+    line-height: 32px;
+    text-align: right;
+}
+.nav a {
+    font-size: 16px;
+    color: #ffffff;
+    padding: 20px;
+}
+.nav a:hover {
+    background-color: #282828;
+}
+.nav a:active {
+    background-color: #282828;
+}
+.ziliao {
+    margin: 0 auto;
+    width: 980px;
+}
+.ziliaoxiazai {
+    padding: 30px 0;
+}
+/*.xiazai_1 {*/
+    /*color: #FFFFFF;*/
+    /*min-width: 270px;*/
+    /*padding: 20px;*/
+    /*border-radius: 4px;*/
+    /*background-color: #52b906;*/
+    /*margin: 0 20px;*/
+/*}*/
+.xiazai_1{
+    color: #FFFFFF;
+    min-width: 270px;
+    padding: 20px;
+    border-radius: 4px;
+    background-color: #52b906;
+    margin: 0 20px;
+}
+.xiazai_2 {
+    color: #FFFFFF;
+    min-width: 270px;
+    padding: 20px;
+    border-radius: 4px;
+    background-color: #f88c0c;
+    margin: 0 20px;
+}
+.xiazai_3 {
+    color: #FFFFFF;
+    min-width: 270px;
+    padding: 20px;
+    border-radius: 4px;
+    background-color: #0ea6ed;
+    margin: 0 20px;
+}
+.all {
+    margin: 0 auto;
+    width: 980px;
+    height: auto
+}
+.left {
+    padding: 40px 0px;
+    width: 200px;
+    height: 100px;
+    background-color: #e1e1e1;
+    border-radius: 2px;
+    float: left;
+    margin-top: 6%;
+}
+.right {
+    width: 720px;
+    min-height: 728px;
+    padding: 40px 20px;
+    margin-top: 6%;
+    float: right;
+}
+.buzhou {
+    width: 780px;
+    padding: 40px 20px;
+}
+li a {
+    font-size: 20px;
+    color: #323232;
+    line-height: 40px;
+}
+.ma_1,
+.ma_2,
+.ma_3,
+.ma_4 {
+    font-size: 14px;
+    padding: 20px;
+    color: #FFFFFF;
+    background-color: #323232;
+    width: 600px;
+    line-height: 30px;
+    border-radius: 4px;
+}

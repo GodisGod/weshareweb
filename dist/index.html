@@ -1,63 +1,93 @@
-<!doctype html>
-<html class="no-js" lang="">
-<head>
-    <meta charset="utf-8">
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title></title>
+    <title>weshare</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="css/mainpage.css">
+    <link rel="stylesheet" href="css/connectus.css">
+    <link rel="stylesheet" href="css/dcss.css">
 
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/lhd.css">
-    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
-<!--[if lt IE 8]>
-<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
-    your browser</a> to improve your experience.</p>
-<![endif]-->
+    <div class="container">
+    <div class="header">
+        <div class="wesharelogo"></div>
+        <div class="nav">
 
-<!-- Add your site or application content here -->
-<p class="lhdp">hello LHD.</p>
+            <a href="mainpage.html">首页</a>
 
-<div class="lhdred">
-    <a href="lhd.html">今天是个好日子</a>
-    <ul class="lhdul">
-        <li>11111111111111111111111</li>
-        <li>22222222222222222222222</li>
-        <li>33333333333333333333333</li>
-        <li>44444444444444444444444</li>
-        <li>55555555555555555555555</li>
-    </ul>
-    <p>hello hello hello hello lhd</p>
+            <a href="index.html">开发者中心</a>
+
+            <a href="connectus.html">联系我们</a>
+
+            <a class="yuyan" href="#">English</a>
+
+        </div>
+    </div>
 </div>
+    <div class="all">
+    <div class="left">
+        <div class="menu">
+            <ul>
+                <li>
+                    <a href="" target="_self">资料下载</a>
+                </li>
+                <li>
+                    <a href="" target="_self">常见问题</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="right">
+        <span class="xiazai_1">安卓studio集成下载</span>
+        <span class="xiazai_2">安卓SDK集成示例下载</span>
+        <span class="xiazai_3">SDK说明文档下载</span>
 
+        <div class="buzhou">
+            <h2>android studio快速集成步骤</h2>
 
-<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
-<script src="js/plugins.js"></script>
-<script src="js/main.js"></script>
+            <h3>1.在你的 app Module 的build.gradle文件中添加</h3>
 
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-<script>
-    (function (b, o, i, l, e, r) {
-        b.GoogleAnalyticsObject = l;
-        b[l] || (b[l] =
-            function () {
-                (b[l].q = b[l].q || []).push(arguments)
-            });
-        b[l].l = +new Date;
-        e = o.createElement(i);
-        r = o.getElementsByTagName(i)[0];
-        e.src = 'https://www.google-analytics.com/analytics.js';
-        r.parentNode.insertBefore(e, r)
-    }(window, document, 'script', 'ga'));
-    ga('create', 'UA-XXXXX-X', 'auto');
-    ga('send', 'pageview');
-</script>
+            <div class="ma_1">dependencies {<br/> compile 'com.yiba:wifisdk:1.0.0'<br/> }
+            </div>
+            <h4>如图所示</h4>
+            <img src="img/sdk2-2.png" style="width: 80%;height: 80%;"/>
+
+            <h3>2.打开WiFi界面</h3>
+
+            <div class="ma_2">Intent intent = <br/> new Intent( MainActivity.this , YIbaWifiActivity.class) ;
+                startActivity( intent );
+            </div>
+            <h4>如图所示</h4>
+            <img src="img/sdk2-2.png" style="width: 80%;height: 80%;"/>
+
+            <h3>3.常用API说明</h3>
+
+            <div class="ma_3">//获取free wifi 通知的开关状态。true:打开 false:关闭。默认情况下为true
+                WiFiSDKManager.getInstance().getFreeWifiToggle( this ) ;<br/> //设置free wifi 通知的开关状态。true：打开
+                false:关闭。默认情况下为true//如果你设置为false,那么你将收不到任何关于free
+                wifi的通知提醒。WiFiSDKManager.getInstance().setFreeWifiToggle( this , true );<br/> //获取open wifi
+                通知的开关状态。true：打开 false:关闭。默认情况下为true WiFiSDKManager.getInstance().getOpenWifiToggle( this ) ;<br/>
+                //设置open wifi 通知的开关状态。true：打开 false:关闭。默认情况下为true//如果你设置为false,那么你将收不到任何关于open
+                wifi的通知提醒。WiFiSDKManager.getInstance().setOpenWifiToggle( this , true );<br/> //获取常驻通知栏的显示状态。true：显示
+                false:关闭。默认情况下为trueWiFiSDKManager.getInstance().getNotificationToggle( this ) ;<br/>
+                //设置常驻通知栏的显示状态。true：显示 false:关闭。默认情况下为true。//如果你设置为false,那么手机通知栏里面关于wifi
+                的常驻通知将消失。WiFiSDKManager.getInstance().setNotificationToggle( this , true );<br/> }
+            </div>
+
+            <h3>4.混淆说明</h3>
+            <h4>若项目使用代码混淆，请保证资源文件R不被混淆 例如项目包名：com.yiba.sdk则在混淆规则中设置</h4>
+
+            <div class="ma_4"> -keep public class com.yiba.sdk.R$*{<br/> public static final int *; <br/> }
+            </div>
+            <h4>保证support v4包相关类和Activity、Service以及继承的View类不被混淆。</h4>
+        </div>
+    </div>
+</div>
 </body>
+
 </html>
